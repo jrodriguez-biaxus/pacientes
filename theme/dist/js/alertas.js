@@ -11,7 +11,8 @@ Highcharts.chart('container', {
             'Pacientes sin recoger tratamientos en OL',
             'Respuestas negativas CTC', 
             'Pacientes Tutelas', 
-            'Paciente no acepta programa'],
+            'Paciente no acepta programa',
+            'Total pacientes'],
         title: {
             text: null
         }
@@ -49,6 +50,6 @@ Highcharts.chart('container', {
     },
     series: [{
         name: 'Pacientes',
-        data: [107, 31, 150, 180, 60]
+        data: [107, 31, 150, 180, 60, 528]
     }]
 });
