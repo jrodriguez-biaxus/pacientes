@@ -50,6 +50,7 @@ Highcharts.chart('container', {
     },
     series: [{
         name: 'Pacientes',
+        color:'rgb(237, 85, 101)',
         data: [107, 31, 150, 180, 60, 528]
     }]
 });
