@@ -11,8 +11,7 @@ Highcharts.chart('container', {
             'Pacientes sin recoger tratamientos en OL',
             'Respuestas negativas CTC', 
             'Pacientes Tutelas', 
-            'Paciente no acepta programa',
-            'Total pacientes'],
+            'Paciente no acepta programa'],
         title: {
             text: null
         }
@@ -35,15 +34,7 @@ Highcharts.chart('container', {
         }
     },
     legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'top',
-        x: -40,
-        y: 80,
-        floating: true,
-        borderWidth: 1,
-        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-        shadow: true
+       enabled: false
     },
     credits: {
         enabled: false
@@ -51,6 +42,6 @@ Highcharts.chart('container', {
     series: [{
         name: 'Pacientes',
         color:'rgb(237, 85, 101)',
-        data: [107, 31, 150, 180, 60, 528]
+        data: [12, 10, 5, 7, 6]
     }]
 });
