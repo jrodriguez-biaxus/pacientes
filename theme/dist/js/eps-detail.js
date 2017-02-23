@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    var api = $(".table").DataTable({
+    var api = $("#detail-table.table").DataTable({
         paging: false,
         info:false,
         ordering:false,
