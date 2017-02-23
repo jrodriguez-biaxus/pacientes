@@ -39,11 +39,24 @@ Highcharts.chart('container', {
     series: [{
         name: 'Pacientes proyectados',
         data: [50, 60, 70],
-        color: '#AAA'
-
+        color: '#AAA',
+        events: {
+            click:function(e){
+                if(e.point.category === "Mar") {
+                    window.location.href = '/index-detail.html';
+                }
+            }
+        }
     }, {
         name: 'Pacientes efectivos',
         data: [45, 50, 80],
-        color: '#00a65a'
+        color: '#00a65a',
+        events: {
+            click:function(e){
+                if(e.point.category === "Mar") {
+                    window.location.href = '/index-detail.html';
+                }
+            }
+        }
     }]
 });

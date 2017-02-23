@@ -42,6 +42,13 @@ Highcharts.chart('container', {
     series: [{
         name: 'Pacientes',
         color:'rgb(237, 85, 101)',
-        data: [12, 10, 5, 7, 6]
+        data: [12, 10, 5, 7, 6],
+        events: {
+            click:function(e){
+                if(e.point.category === "Pacientes sin tratamiento") {
+                    window.location.href = '/alertas-detail.html';
+                }
+            }
+        }
     }]
 });

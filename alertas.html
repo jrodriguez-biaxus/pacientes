@@ -45,7 +45,10 @@
                 <li><a href="/">Reporte de Proyectados vs Efectivos</a></li>
             </ul>
             <ul class="nav navbar-nav">
-                <li><a href="#">Alertas</a></li>
+                <li class="active"><a href="#">Alertas</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="/eps.html">Reporte de Pacientes por EPS y Zona</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -214,14 +217,14 @@
 
       <!-- Main content -->
       <section class="content">
-        <div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+        <div id="container" style="min-width: 310px; height: 245px; margin: 0 auto"></div>
             
         <div class="box box-default">
           <!--div class="box-header with-border">
             <h3 class="box-title">Reporte de pacientes</h3>
           </div-->
           <div class="box-body no-padding">
-            <table class="table">
+            <table class="table table-condensed">
               <thead>
                     <tr>
                         <th>Alerta</th>
@@ -300,6 +303,6 @@
 
 <script src="https://code.highcharts.com/highcharts.js"></script>
 
-<script src="/theme/dist/js/alertas.js"></script>
+<script src="/theme/dist/js/alertas.js?vers=20170222"></script>
 </body>
 </html>

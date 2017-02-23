@@ -42,10 +42,13 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="#">Reporte de Proyectados vs Efectivos</a></li>
+                <li class="active"><a href="#">Reporte de Proyectados vs Efectivos</a></li>
             </ul>
             <ul class="nav navbar-nav">
                 <li><a href="/alertas.html">Alertas</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="/eps.html">Reporte de Pacientes por EPS y Zona</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -207,8 +210,9 @@
           Reporte de Proyectados vs Efectivos
         </h1>
         <ol class="breadcrumb">
-          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li class="active">Reporte de Proyectados vs Efectivos</li>
+          <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
+          <li><a href="/index.html">Reporte de Proyectados vs Efectivos</a></li>
+          <li class="active">Detalle</li>
         </ol>
       </section>
 
@@ -216,18 +220,19 @@
       <section class="content">
         <div class="box box-default">
           <div class="box-body no-padding">
-            <table class="table">
+            <table class="table table-condensed table-striped">
               <thead>
                     <tr>
                         <th>Nombre del paciente</th>
                         <th>Nombre médico</th>
+                        <th>Especialidad</th>
                         <th>EPS</th>
                         <th>Ciudad</th>
                     </tr>
               </thead>
                 <tbody>
                     <tr>
-                        <td colspan="4" class="text-center"><small>No hay registros</small></td>
+                        <td colspan="5" class="text-center"><small>No hay registros</small></td>
                     </tr>
                    </tbody>
               </table>

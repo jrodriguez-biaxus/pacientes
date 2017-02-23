@@ -8,9 +8,8 @@ Highcharts.chart('container', {
     xAxis: {
         categories: [
             'Adherencia', 
-            'Respuesta CTC',
-            'Paciente no acepta programa', 
-            'Total pacientes'],
+            'Pendientes Respuesta CTC',
+            'Paciente no acepta programa'],
         title: {
             text: null
         }
@@ -24,7 +23,7 @@ Highcharts.chart('container', {
         labels: {
             overflow: 'justify'
         }
-    },
+    }, 
     plotOptions: {
         bar: {
             dataLabels: {
@@ -33,21 +32,20 @@ Highcharts.chart('container', {
         }
     },
     legend: {
-        layout: 'vertical',
-        align: 'right',
-        verticalAlign: 'top',
-        x: -40,
-        y: 80,
-        floating: true,
-        borderWidth: 1,
-        backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
-        shadow: true
+        enabled: false
     },
     credits: {
         enabled: false
     },
     series: [{
         name: 'Pacientes',
-        data: [107, 31, 150, 288]
+        data: [15, 3, 5],
+        events: {
+            click:function(e){
+                if(e.point.category === "Adherencia") {
+                    window.location.href = '/medicos/index-detail.html';
+                }
+            }
+        }
     }]
 });
