@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Reporte de Pacientes por EPS y Zona | Pacientes</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="/theme/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/theme/dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="/theme/dist/css/skins/_all-skins.min.css">
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.13/datatables.min.css"/>
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style>
+    .dataTables_filter {
+      display: none;
+    }
+  </style>
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand"><b>Pacientes</b></a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/">Reporte de Proyectados vs Efectivos</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="/alertas.html">Alertas</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Reporte de Pacientes por EPS y Zona</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <!-- Messages: style can be found in dropdown.less-->
+            <li class="dropdown messages-menu">
+              <!-- Menu toggle button -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-envelope-o"></i>
+                <span class="label label-success">4</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="header">You have 4 messages</li>
+                <li>
+                  <!-- inner menu: contains the messages -->
+                  <ul class="menu">
+                    <li><!-- start message -->
+                      <a href="#">
+                        <div class="pull-left">
+                          <!-- User Image -->
+                          <img src="/theme/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        </div>
+                        <!-- Message title and timestamp -->
+                        <h4>
+                          Support Team
+                          <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                        </h4>
+                        <!-- The message -->
+                        <p>Why not buy a new awesome theme?</p>
+                      </a>
+                    </li>
+                    <!-- end message -->
+                  </ul>
+                  <!-- /.menu -->
+                </li>
+                <li class="footer"><a href="#">See All Messages</a></li>
+              </ul>
+            </li>
+            <!-- /.messages-menu -->
+
+            <!-- Notifications Menu -->
+            <li class="dropdown notifications-menu">
+              <!-- Menu toggle button -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-bell-o"></i>
+                <span class="label label-warning">10</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="header">You have 10 notifications</li>
+                <li>
+                  <!-- Inner Menu: contains the notifications -->
+                  <ul class="menu">
+                    <li><!-- start notification -->
+                      <a href="#">
+                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                      </a>
+                    </li>
+                    <!-- end notification -->
+                  </ul>
+                </li>
+                <li class="footer"><a href="#">View all</a></li>
+              </ul>
+            </li>
+            <!-- Tasks Menu -->
+            <li class="dropdown tasks-menu">
+              <!-- Menu Toggle Button -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <i class="fa fa-flag-o"></i>
+                <span class="label label-danger">9</span>
+              </a>
+              <ul class="dropdown-menu">
+                <li class="header">You have 9 tasks</li>
+                <li>
+                  <!-- Inner menu: contains the tasks -->
+                  <ul class="menu">
+                    <li><!-- Task item -->
+                      <a href="#">
+                        <!-- Task title and progress text -->
+                        <h3>
+                          Design some buttons
+                          <small class="pull-right">20%</small>
+                        </h3>
+                        <!-- The progress bar -->
+                        <div class="progress xs">
+                          <!-- Change the css width attribute to simulate progress -->
+                          <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                            <span class="sr-only">20% Complete</span>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <!-- end task item -->
+                  </ul>
+                </li>
+                <li class="footer">
+                  <a href="#">View all tasks</a>
+                </li>
+              </ul>
+            </li>
+            <!-- User Account Menu -->
+            <li class="dropdown user user-menu">
+              <!-- Menu Toggle Button -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <!-- The user image in the navbar-->
+                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                <span class="hidden-xs">Jesus Ríos</span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- The user image in the menu -->
+                <li class="user-header" style="height: initial;">
+                  <img src="/theme/dist/img/user2-160x160.jpg" style="display: none;" class="img-circle" alt="User Image">
+
+                  <p>
+                    Jesus Ríos
+                    <small>Gerente</small>
+                  </p>
+                </li>
+                <!-- Menu Body -->
+                <li class="user-body">
+                  <div class="row">
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Followers</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Sales</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Friends</a>
+                    </div>
+                  </div>
+                  <!-- /.row -->
+                </li>
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-custom-menu -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+    <div class="container">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <h1>
+          Reporte de Pacientes por EPS y Zona
+        </h1>
+        <ol class="breadcrumb">
+          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+          <li><a href="/eps.html">Reporte de Pacientes por EPS y Zonas</a></li>
+          <li class="active">Detalle</li>
+        </ol>
+      </section>
+
+      <!-- Main content -->
+      <section class="content">
+        <div class="box box-default">
+          <div class="box-body">
+          <div class="row form-group">
+              <div class="col-md-4">
+                <label>Eps</label>
+                <select id="eps" class="form-control input input-sm">
+                  <option selected="true">Nueva EPS</option>
+                  <option>Cafesalud</option>
+                  <option>Coomeva</option>
+                  <option>Salud Total</option>
+                  <option>Compensar</option>
+                  <option>Otros</option>
+                </select>
+              </div>
+              <div class="col-md-4">
+                <label>Zonas</label>
+                <select id="zone" class="form-control input input-sm">
+                  <option selected="true">Costa</option>
+                  <option>Santanderes</option>
+                  <option>Antioquia</option>
+                  <option>Centro</option>
+                  <option>Occidente</option>
+                </select>
+              </div>
+          </div>
+            <table class="table table-bordered table-striped table-condensed">
+              <thead>
+                    <tr>
+                        <th>Nombre médico</th>
+                        <th>Nombre paciente</th>
+                        <th>Operador logístico</th>
+                        <th>Nombre representante</th>
+                        <th>Ciudad</th>
+                        <th>Eps</th>
+                        <th>Zona</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+<tr><td>GILBERTO DESCOTEAUX  </td><td>VIVIENNE HALLS  </td><td>CAMELIA MAYNARD  </td><td>LOREE MURGA  </td><td>SOATÁ</td><td>Nueva EPS</td><td>Costa</td></tr>
+<tr><td>DESIRAE BACKSTROM  </td><td>ESSIE NEUMANN  </td><td>RICARDO PETZOLD  </td><td>ALBERTA JARED  </td><td>ALCALÁ</td><td>Nueva EPS</td><td>Santanderes</td></tr>
+<tr><td>HAN PIRES  </td><td>AMY TULLOCH  </td><td>MICHELINE MORNING  </td><td>TESHA GREENHAW  </td><td>EL GUAMO</td><td>Nueva EPS</td><td>Antioquia</td></tr>
+<tr><td>YUETTE BERRYMAN  </td><td>VELDA STEIGERWALD  </td><td>HASSIE WAGAR  </td><td>CHERRIE WHEELER  </td><td>VERSALLES</td><td>Nueva EPS</td><td>Centro</td></tr>
+<tr><td>LUCI HARM  </td><td>WONDA HAGUE  </td><td>LYNWOOD REDRICK  </td><td>HENRIETTA BASYE  </td><td>TURBACO</td><td>Nueva EPS</td><td>Occidente</td></tr>
+<tr><td>MARYA BEITZ  </td><td>KATHARINA ELSWICK  </td><td>KARINA LOAN  </td><td>DANIELLA GARIBALDI  </td><td>PUERTO CARREÑO</td><td>Cafesalud</td><td>Costa</td></tr>
+<tr><td>BRIDGETT OSMOND  </td><td>MARGARETTE RAHMAN  </td><td>RAYMON ORDUNO  </td><td>KYRA TETI  </td><td>BARRANCA DE UPÍA</td><td>Cafesalud</td><td>Santanderes</td></tr>
+<tr><td>LAURIE HALTON  </td><td>VERNON WHICHARD  </td><td>DORTHY FREDERICKSON  </td><td>RANA ZARAGOZA  </td><td>MARQUETALIA</td><td>Cafesalud</td><td>Antioquia</td></tr>
+<tr><td>SHARELL FAZEKAS  </td><td>ALINA BRADDY  </td><td>KATE FOGARTY  </td><td>ELISA SWIMS  </td><td>SAN GIL</td><td>Cafesalud</td><td>Centro</td></tr>
+<tr><td>JIMMIE PENDARVIS  </td><td>FARRAH REIGHARD  </td><td>LOURDES CADDEN  </td><td>CIERA PELC  </td><td>OICATÁ</td><td>Cafesalud</td><td>Occidente</td></tr>
+<tr><td>JERLENE MORNINGSTAR  </td><td>DONNETTA EUSTICE  </td><td>LULA IMMEL  </td><td>BRYON SCHLICHER  </td><td>QUIBDÓ</td><td>Coomeva</td><td>Costa</td></tr>
+<tr><td>CARISSA FRISCIA  </td><td>MONSERRATE LAHTI  </td><td>CHANDA SPELLS  </td><td>BRADFORD GLADSON  </td><td>ALMAGUER</td><td>Coomeva</td><td>Santanderes</td></tr>
+<tr><td>RENATA CHARITY  </td><td>LUISE RUDDELL  </td><td>CLARITA LEFEBRE  </td><td>SIDNEY CRIPPS  </td><td>CUASPÚD</td><td>Coomeva</td><td>Antioquia</td></tr>
+<tr><td>MILLIE PENNELL  </td><td>DANIELLE STALLCUP  </td><td>STEPHEN KENISTON  </td><td>IONE FITZSIMONS  </td><td>TAURAMENA</td><td>Coomeva</td><td>Centro</td></tr>
+<tr><td>JA KNIPP  </td><td>CHEYENNE SILVERIA  </td><td>JOHNETTA MAIDEN  </td><td>LATASHA STORMER  </td><td>ARCABUCO</td><td>Coomeva</td><td>Occidente</td></tr>
+<tr><td>SERGIO RISK  </td><td>DEANA GLASCO  </td><td>CLAUDIE RIDINGER  </td><td>ROSANNA TAKEMOTO  </td><td>CORINTO</td><td>Salud Total</td><td>Costa</td></tr>
+<tr><td>FLORIDA WAHL  </td><td>DORINDA RHOTEN  </td><td>SUSANNA FIRTH  </td><td>BARABARA WEIDEMAN  </td><td>VILLAVICENCIO</td><td>Salud Total</td><td>Santanderes</td></tr>
+<tr><td>MADELINE TESAR  </td><td>ALLINE DAHLIN  </td><td>REGINIA SUND  </td><td>MARCEL WOOLRIDGE  </td><td>PESCA</td><td>Salud Total</td><td>Antioquia</td></tr>
+<tr><td>CASIMIRA BOLT  </td><td>FLORINE LABLANC  </td><td>NEDRA HOGG  </td><td>ZULEMA STEENBERG  </td><td>LA MONTAÑITA</td><td>Salud Total</td><td>Centro</td></tr>
+<tr><td>BEATA CHOUDHURY  </td><td>MARK MCNICHOLS  </td><td>MAIRA JOSEPHSON  </td><td>JOSEF MARSHAL  </td><td>OIBA</td><td>Salud Total</td><td>Occidente</td></tr>
+<tr><td>MIRTA CASTILLA  </td><td>ZULEMA BIRKHEAD  </td><td>SYREETA CALLIER  </td><td>KIZZIE CORTINAS  </td><td>BARBACOAS</td><td>Compensar</td><td>Costa</td></tr>
+<tr><td>EMELINA FURMAN  </td><td>LAKIA MCKEEL  </td><td>DELORSE MCVICKER  </td><td>PING ALFORD  </td><td>CHIGORODÓ</td><td>Compensar</td><td>Santanderes</td></tr>
+<tr><td>SUN MORFORD  </td><td>LINDA SHEAR  </td><td>GERALD MUNDELL  </td><td>WELDON PETROSINO  </td><td>GACHANTIVÁ</td><td>Compensar</td><td>Antioquia</td></tr>
+<tr><td>CARMINE AMSDEN  </td><td>SHEILA GLANDON  </td><td>MEGGAN MARBLE  </td><td>KIERSTEN SCHULMAN  </td><td>CAREPA</td><td>Compensar</td><td>Centro</td></tr>
+<tr><td>NORMAND ISER  </td><td>PENNY PRIDDY  </td><td>CHANTAL MAEDA  </td><td>SO PROEHL  </td><td>MARULANDA</td><td>Compensar</td><td>Occidente</td></tr>
+<tr><td>ALEC ROMANS  </td><td>ANGELLA MORIARTY  </td><td>SHAVONNE BASSLER  </td><td>DANA HUSAIN  </td><td>SOCOTÁ</td><td>Otros</td><td>Costa</td></tr>
+<tr><td>CLOTILDE WEATHERHOLTZ  </td><td>BARB HOANG  </td><td>GLENN LEBEAU  </td><td>GLYNDA FORST  </td><td>BUCARAMANGA</td><td>Otros</td><td>Santanderes</td></tr>
+<tr><td>SADIE BEELER  </td><td>VONCILE GRELL  </td><td>ROSINA DUNMIRE  </td><td>MARCIA BOREL  </td><td>ARGELIA</td><td>Otros</td><td>Antioquia</td></tr>
+<tr><td>SHAUNTE LEHMKUHL  </td><td>RANDELL HAFFNER  </td><td>ASTRID BARRS  </td><td>SIBYL OVERSON  </td><td>DISTRACCIÓN</td><td>Otros</td><td>Centro</td></tr>
+<tr><td>ROSY RODES  </td><td>FAVIOLA NA  </td><td>ETHELENE PORCARO  </td><td>CICELY BOOTHBY  </td><td>SILOS</td><td>Otros</td><td>Occidente</td></tr>
+<tr><td>ELMO BENNETT  </td><td>FOSTER GOKEY  </td><td>OMA DOI  </td><td>EMIL SWIFT  </td><td>TERUEL</td><td>Nueva EPS</td><td>Costa</td></tr>
+<tr><td>LOIDA UNGAR  </td><td>CORRIE MINOTT  </td><td>SAVANNA VANETTEN  </td><td>VI KOREN  </td><td>SILVANIA</td><td>Nueva EPS</td><td>Santanderes</td></tr>
+<tr><td>GABRIEL LINCH  </td><td>KRISTEEN BALICKI  </td><td>MIRNA ANZALONE  </td><td>ELIAS GERTNER  </td><td>PUPIALES</td><td>Nueva EPS</td><td>Antioquia</td></tr>
+<tr><td>EURA DUNKLE  </td><td>AMBROSE GREENLEE  </td><td>RUEBEN HEITMAN  </td><td>RUDOLPH ROBARGE  </td><td>LA PALMA</td><td>Nueva EPS</td><td>Centro</td></tr>
+<tr><td>TAWANA TICKLE  </td><td>KIZZY TANDY  </td><td>JUNIOR SIGMUND  </td><td>JOANN SIU  </td><td>GUAVATÁ</td><td>Nueva EPS</td><td>Occidente</td></tr>
+<tr><td>MARYANNA MCGARY  </td><td>KYMBERLY GANLEY  </td><td>PILAR ORMAN  </td><td>SHAMIKA LUCEY  </td><td>BARBOSA</td><td>Cafesalud</td><td>Costa</td></tr>
+<tr><td>JOSHUA OBYRNE  </td><td>RENEA PATZ  </td><td>SHERLEY ROSELL  </td><td>LOUISA SCHLEMMER  </td><td>TUTAZÁ</td><td>Cafesalud</td><td>Santanderes</td></tr>
+<tr><td>SEPTEMBER TEIXEIRA  </td><td>LING PINELLI  </td><td>WANETTA GARBUTT  </td><td>SOCORRO BRAZELTON  </td><td>TONA</td><td>Cafesalud</td><td>Antioquia</td></tr>
+<tr><td>CHRISTIN HUGHEY  </td><td>CASANDRA CALLISON  </td><td>DUSTI WAN  </td><td>DELORA GIST  </td><td>TOLÚ VIEJO</td><td>Cafesalud</td><td>Centro</td></tr>
+<tr><td>FIDEL EVERMAN  </td><td>LUANNA HELVEY  </td><td>BRITTANI BERMEA  </td><td>NIDA TROMBLEY  </td><td>MACANAL</td><td>Cafesalud</td><td>Occidente</td></tr>
+<tr><td>SHANDI HUETT  </td><td>EVETTE BLACKSHEAR  </td><td>GLADIS UECKER  </td><td>YOLONDA SEAMONS  </td><td>PINILLOS</td><td>Coomeva</td><td>Costa</td></tr>
+<tr><td>MAC PATMAN  </td><td>DEEANNA LAWALIN  </td><td>TALITHA AREVALO  </td><td>ETSUKO MCCAMPBELL  </td><td>CARMEN DE APICALÁ</td><td>Coomeva</td><td>Santanderes</td></tr>
+<tr><td>MIKKI KIRKSEY  </td><td>BEN RUSTAD  </td><td>RAMON HATHORN  </td><td>ARMANDA JASPER  </td><td>SORA</td><td>Coomeva</td><td>Antioquia</td></tr>
+<tr><td>MARTI MCARDLE  </td><td>CHRISTIN KIMBELL  </td><td>DONOVAN CHANCE  </td><td>JODEE GARCIA  </td><td>BITUIMA</td><td>Coomeva</td><td>Centro</td></tr>
+<tr><td>CLAUDETTE MUSSELMAN  </td><td>BEATRIZ RANGER  </td><td>ODILIA ATCHINSON  </td><td>MINTA BESSEY  </td><td>GUAPÍ</td><td>Coomeva</td><td>Occidente</td></tr>
+<tr><td>BEATRICE BELLANTONI  </td><td>DAMON HIGHAM  </td><td>SHAUNTE RAMBIN  </td><td>EDMUND LIGGETT  </td><td>SATIVANORTE</td><td>Salud Total</td><td>Costa</td></tr>
+<tr><td>JEANNETTE MINCEY  </td><td>DANI WESTRICH  </td><td>DAINE TAKACS  </td><td>BRIGIDA AMMONS  </td><td>MESETAS</td><td>Salud Total</td><td>Santanderes</td></tr>
+<tr><td>NANCEY GADDIS  </td><td>ROSANA ONEIL  </td><td>KRISTAN AUTON  </td><td>LUDIVINA SCHEBLER  </td><td>TUCHÍN</td><td>Salud Total</td><td>Antioquia</td></tr>
+<tr><td>MARCELLUS FORD  </td><td>TIERRA UNG  </td><td>CALISTA CAMILLE  </td><td>VALORIE LASHUA  </td><td>LORICA</td><td>Salud Total</td><td>Centro</td></tr>
+<tr><td>NICKI FAVOR  </td><td>NAKESHA BALSAMO  </td><td>BRONWYN MABERRY  </td><td>DREMA MCGUIRE  </td><td>CÓMBITA</td><td>Salud Total</td><td>Occidente</td></tr>
+<tr><td>NGAN FLAKES  </td><td>DEBRAH MCNAIR  </td><td>WALLY BLACKMAN  </td><td>JUDE GAROFALO  </td><td>QUINCHÍA</td><td>Compensar</td><td>Costa</td></tr>
+<tr><td>JEANETTE COMPOS  </td><td>MARLO FUTRAL  </td><td>SHERYLL BASTARACHE  </td><td>CHAU CAMBRA  </td><td>CANDELARIA</td><td>Compensar</td><td>Santanderes</td></tr>
+<tr><td>SHARAN DULIN  </td><td>TAJUANA PREECE  </td><td>MADDIE KROB  </td><td>TAMEKIA BECKERT  </td><td>VILLAGÓMEZ</td><td>Compensar</td><td>Antioquia</td></tr>
+<tr><td>GIL SANDERFUR  </td><td>ANGLEA MIELES  </td><td>SHARIKA HYNSON  </td><td>JOVAN HENRIKSEN  </td><td>VEGACHÍ</td><td>Compensar</td><td>Centro</td></tr>
+<tr><td>JENINE LOVETT  </td><td>ADELINE SCHWARTZMAN  </td><td>MAI BARTZ  </td><td>PERCY BERRETT  </td><td>BUESACO</td><td>Compensar</td><td>Occidente</td></tr>
+<tr><td>BLANCHE TROYER  </td><td>ROBERTA BOSTROM  </td><td>LIANE HAMMER  </td><td>IRENE GAMEROS  </td><td>PANQUEBA</td><td>Otros</td><td>Costa</td></tr>
+<tr><td>JACALYN WAAG  </td><td>WINONA DAMMANN  </td><td>ELLA CREMIN  </td><td>RONA JARBOE  </td><td>LEIVA</td><td>Otros</td><td>Santanderes</td></tr>
+<tr><td>EARL STOWERS  </td><td>KELI HIGUERA  </td><td>BRAD DARRIGO  </td><td>MATTHEW BECHTOLD  </td><td>BOSCONIA</td><td>Otros</td><td>Antioquia</td></tr>
+<tr><td>LELIA ROTHE  </td><td>ROSEANNA CORKER  </td><td>EDIE POLL  </td><td>ETHELYN CONKLING  </td><td>CAJICÁ</td><td>Otros</td><td>Centro</td></tr>
+<tr><td>ROSEANN MANVILLE  </td><td>WINFORD BARELA  </td><td>MARIA DEVRIES  </td><td>LEVI MIDGETT  </td><td>PLANADAS</td><td>Otros</td><td>Occidente</td></tr>
+<tr><td>ELA BRINDLE  </td><td>LUELLA MUNDO  </td><td>ALESIA GAMON  </td><td>CLEORA HARTZELL  </td><td>SAN SEBASTIÁN</td><td>Nueva EPS</td><td>Costa</td></tr>
+<tr><td>GINGER HIPPE  </td><td>SADE LUNDGREN  </td><td>ZONA SUMMY  </td><td>CAYLA SPENO  </td><td>CISNEROS</td><td>Nueva EPS</td><td>Santanderes</td></tr>
+<tr><td>EDDIE CHENIER  </td><td>BRENNA PAETZOLD  </td><td>SHAUNNA TIMMINS  </td><td>LINDSEY OBRIEN  </td><td>GACHALÁ</td><td>Nueva EPS</td><td>Antioquia</td></tr>
+<tr><td>TERICA DELAWDER  </td><td>MERNA PIRAINO  </td><td>MAY VESELKA  </td><td>ILONA KLENKE  </td><td>CARAMANTA</td><td>Nueva EPS</td><td>Centro</td></tr>
+<tr><td>MARCELO COFFELT  </td><td>CARLIE HY  </td><td>MARGURITE HOLLOW  </td><td>ALBERTO REYER  </td><td>TIBASOSA</td><td>Nueva EPS</td><td>Occidente</td></tr>
+<tr><td>MILAN SOMMA  </td><td>MANUEL MAHABIR  </td><td>SUZANN LEVASSEUR  </td><td>BIRGIT MURIEL  </td><td>SURATÁ</td><td>Cafesalud</td><td>Costa</td></tr>
+<tr><td>FATIMAH MORK  </td><td>CORRINNE MCIVOR  </td><td>DEMETRA TAUL  </td><td>GRACE CORTINA  </td><td>CABUYARO</td><td>Cafesalud</td><td>Santanderes</td></tr>
+<tr><td>VASILIKI LEIGH  </td><td>LYDA LAYMON  </td><td>OWEN PAWLIK  </td><td>ERIC DAROSA  </td><td>ILES</td><td>Cafesalud</td><td>Antioquia</td></tr>
+<tr><td>TRINA PARRISH  </td><td>NED MARRUFO  </td><td>JI BELLANGER  </td><td>RANDI BAKEWELL  </td><td>JERUSALÉN</td><td>Cafesalud</td><td>Centro</td></tr>
+<tr><td>TRUDIE WOLF  </td><td>TALITHA KUCHTA  </td><td>HORACIO AUGUSTINE  </td><td>MIRANDA STREETER  </td><td>MANZANARES</td><td>Cafesalud</td><td>Occidente</td></tr>
+<tr><td>CAMI BONA  </td><td>LUCIO DULEY  </td><td>KACIE BRUEMMER  </td><td>ALISHIA BISE  </td><td>NARIÑO</td><td>Coomeva</td><td>Costa</td></tr>
+<tr><td>JARVIS BUSHELL  </td><td>DEEANN HAYWARD  </td><td>ETHELYN MADKINS  </td><td>SHIRLY RETZLAFF  </td><td>ANDES</td><td>Coomeva</td><td>Santanderes</td></tr>
+<tr><td>AMANDA KNOPF  </td><td>ALINA BITTNER  </td><td>CELINA VELIZ  </td><td>ALESHIA NEBEL  </td><td>BELÉN</td><td>Coomeva</td><td>Antioquia</td></tr>
+<tr><td>LAURIE PORCO  </td><td>REGINE ORNELLAS  </td><td>TAWNYA KILBURN  </td><td>DELIA HULETT  </td><td>PRADERA</td><td>Coomeva</td><td>Centro</td></tr>
+<tr><td>SHAUNTE PELOQUIN  </td><td>LORETTE CASTONGUAY  </td><td>VELVA UMFLEET  </td><td>NORRIS NOBLE  </td><td>SAN JOSÉ DEL GUAVIARE</td><td>Coomeva</td><td>Occidente</td></tr>
+<tr><td>SHAWNDA BAUGHER  </td><td>LINCOLN WURST  </td><td>AMADA WEYANDT  </td><td>NORAH SHEW  </td><td>PUERTO SALGAR</td><td>Salud Total</td><td>Costa</td></tr>
+<tr><td>JOHN DIFIORE  </td><td>JANETTA BEADLES  </td><td>KALYN MANJARREZ  </td><td>SIOBHAN BERNARDINO  </td><td>TENJO</td><td>Salud Total</td><td>Santanderes</td></tr>
+<tr><td>JANNET HENRICHS  </td><td>HASSIE NIELSON  </td><td>LATRICIA REYS  </td><td>MAYRA TRAUGHBER  </td><td>MOMPÓS</td><td>Salud Total</td><td>Antioquia</td></tr>
+<tr><td>FERNE ADAMSKI  </td><td>GLAYDS BANNISTER  </td><td>IVELISSE REVELES  </td><td>KRISTEEN HAMED  </td><td>BETÉITIVA</td><td>Salud Total</td><td>Centro</td></tr>
+<tr><td>GENE HARROD  </td><td>LEZLIE KINSLER  </td><td>YER MICHELIN  </td><td>KAYLEIGH MALONE  </td><td>CÁQUEZA</td><td>Salud Total</td><td>Occidente</td></tr>
+<tr><td>ADELE VIZCARRA  </td><td>LEON COPLIN  </td><td>LASHANDA PROVENCHER  </td><td>RYANN RUBOTTOM  </td><td>CARMEN DEL DARIÉN</td><td>Compensar</td><td>Costa</td></tr>
+<tr><td>MINNA CLOWERS  </td><td>DREMA LYMAN  </td><td>YASMINE TROGDON  </td><td>ANAMARIA SCHABER  </td><td>CAIMITO</td><td>Compensar</td><td>Santanderes</td></tr>
+<tr><td>ERICK SANDER  </td><td>PHEBE SISON  </td><td>KENDA LINDBERG  </td><td>KATHI SEVERIN  </td><td>PAYA</td><td>Compensar</td><td>Antioquia</td></tr>
+<tr><td>GARNETT LISLE  </td><td>MAURA COCKERHAM  </td><td>JULIANNE BLOMBERG  </td><td>SHAWANDA SCHATZ  </td><td>BARANOA</td><td>Compensar</td><td>Centro</td></tr>
+<tr><td>JEANNETTA BOBER  </td><td>ALPHONSE CUDD  </td><td>KAYCEE SHEALEY  </td><td>JENNA YEARY  </td><td>EL RETORNO</td><td>Compensar</td><td>Occidente</td></tr>
+<tr><td>CRYSTA FISKE  </td><td>DOROTHEA HODO  </td><td>SHONNA MOTLEY  </td><td>BOOKER BROWNE  </td><td>BOJACÁ</td><td>Otros</td><td>Costa</td></tr>
+<tr><td>TONETTE PIETRZAK  </td><td>JOSEF DAHLQUIST  </td><td>MAUREEN MCCLESKEY  </td><td>QUENTIN MURR  </td><td>SIBATÉ</td><td>Otros</td><td>Santanderes</td></tr>
+<tr><td>DANYELLE DALY  </td><td>CARLO ARTZ  </td><td>SHANTI KIMZEY  </td><td>REBECCA LOVERING  </td><td>NUEVA GRANADA</td><td>Otros</td><td>Antioquia</td></tr>
+<tr><td>MIKA FEBRES  </td><td>ALEX MUNCY  </td><td>GERMAINE GORKA  </td><td>JOHN MOFFATT  </td><td>TENA</td><td>Otros</td><td>Centro</td></tr>
+<tr><td>LORE PERSAUD  </td><td>LEEANN JETTER  </td><td>ETHA COSSETTE  </td><td>LANORA TOWNES  </td><td>SAN BERNARDO</td><td>Otros</td><td>Occidente</td></tr>
+<tr><td>KATHEY DERRY  </td><td>TAYLOR DING  </td><td>CASSANDRA FISLER  </td><td>TISH BOX  </td><td>PANDI</td><td>Nueva EPS</td><td>Costa</td></tr>
+<tr><td>BLANCHE MUNGER  </td><td>LAURETTA HERRIMAN  </td><td>MARIANNA BARNHARDT  </td><td>BETSEY FENNELL  </td><td>YAGUARÁ</td><td>Nueva EPS</td><td>Santanderes</td></tr>
+<tr><td>NENA BOTTOM  </td><td>AFTON SIMS  </td><td>CELINDA FAIVRE  </td><td>CRYSTAL BRISTER  </td><td>SIPÍ</td><td>Nueva EPS</td><td>Antioquia</td></tr>
+<tr><td>LAURENA WALCK  </td><td>KATHY RISHER  </td><td>JULIE BLUMENFELD  </td><td>VIRGINA BUCKNER  </td><td>VIGÍA DEL FUERTE</td><td>Nueva EPS</td><td>Centro</td></tr>
+<tr><td>MARGET LASORSA  </td><td>CAMERON WILLILAMS  </td><td>MATHA AUER  </td><td>TAISHA IVIE  </td><td>CLEMENCIA</td><td>Nueva EPS</td><td>Occidente</td></tr>
+<tr><td>NEOMA BROMBERG  </td><td>SARITA DAMES  </td><td>VERENA PAEK  </td><td>MAYRA FITTS  </td><td>SANTA BÁRBARA DE PINTO</td><td>Cafesalud</td><td>Costa</td></tr>
+<tr><td>MARIELA KROM  </td><td>SHAWNTA THURSTON  </td><td>TRENT MORRIS  </td><td>GEORGENE YOSHIOKA  </td><td>LA DORADA</td><td>Cafesalud</td><td>Santanderes</td></tr>
+<tr><td>CARLOTTA LATHEM  </td><td>CONCEPCION FAN  </td><td>DACIA CORT  </td><td>MARGART PORATH  </td><td>YUMBO</td><td>Cafesalud</td><td>Antioquia</td></tr>
+<tr><td>GEORGEANNA HARRY  </td><td>ADRIANNA VANCAMP  </td><td>SHARA GOBEL  </td><td>MEL ENGLISH  </td><td>TIMBIQUÍ</td><td>Cafesalud</td><td>Centro</td></tr>
+<tr><td>PRISCILLA CRACRAFT  </td><td>BEATRIZ PENHOLLOW  </td><td>JEANIE SHAO  </td><td>RUPERT KLEEMAN  </td><td>MIRANDA</td><td>Cafesalud</td><td>Occidente</td></tr>
+<tr><td>TAMIKA ORTIZ  </td><td>BRITT HUNN  </td><td>KAREN LEFEBURE  </td><td>MARIANELA FERREIRA  </td><td>ARBOLEDAS</td><td>Coomeva</td><td>Costa</td></tr>
+<tr><td>SHANA PURSELL  </td><td>MERRI ARCHEY  </td><td>OTTO POPEJOY  </td><td>BRANDEN BORGESON  </td><td>MOÑITOS</td><td>Coomeva</td><td>Santanderes</td></tr>
+<tr><td>EASTER BOAZ  </td><td>LAKITA TSUJI  </td><td>QUENTIN MIGUES  </td><td>KATELYN TUCK  </td><td>PONEDERA</td><td>Coomeva</td><td>Antioquia</td></tr>
+<tr><td>STEVIE GRIMALDO  </td><td>SAL SHIMER  </td><td>ELEANOR BUIE  </td><td>CATHRYN BYRGE  </td><td>LA CAPILLA</td><td>Coomeva</td><td>Centro</td></tr>
+<tr><td>MILES GAUDREAU  </td><td>NICKIE DELISLE  </td><td>DORIA KIMLER  </td><td>OTELIA KETTLE  </td><td>FIRAVITOBA</td><td>Coomeva</td><td>Occidente</td></tr>
+<tr><td>BRUNILDA HUARD  </td><td>SHELTON MAGER  </td><td>BRIANNA BERGSTROM  </td><td>STEPHEN ZICK  </td><td>ZAPAYÁN</td><td>Salud Total</td><td>Costa</td></tr>
+<tr><td>JERRY HEIN  </td><td>LITA FINNEGAN  </td><td>MARIEL MALLOY  </td><td>ZONIA MARSEE  </td><td>PLATO</td><td>Salud Total</td><td>Santanderes</td></tr>
+<tr><td>PERLA HEARN  </td><td>FRANCE KAYSER  </td><td>MICHIKO HORNBERGER  </td><td>EDITH MCQUINN  </td><td>NOBSA</td><td>Salud Total</td><td>Antioquia</td></tr>
+<tr><td>DEVONA MAUGER  </td><td>LUCILE DANAHER  </td><td>MITCHELL CHRIST  </td><td>LARITA WHITWORTH  </td><td>MACEO</td><td>Salud Total</td><td>Centro</td></tr>
+<tr><td>LAREE CYRUS  </td><td>SHERA BASILE  </td><td>LATRINA HOPEWELL  </td><td>KAROLE LOUDIN  </td><td>BOGOTÁ, D.C.</td><td>Salud Total</td><td>Occidente</td></tr>
+<tr><td>GIUSEPPINA MARTINEAU  </td><td>CASSY LITZ  </td><td>CODI KOCSIS  </td><td>FELIPE TROTTER  </td><td>ISNOS</td><td>Compensar</td><td>Costa</td></tr>
+<tr><td>KARIMA LEIST  </td><td>PARIS BASNETT  </td><td>DANYELLE GORRELL  </td><td>ROMONA MILBURN  </td><td>EL PIÑÓN</td><td>Compensar</td><td>Santanderes</td></tr>
+<tr><td>DAMARIS ROWAN  </td><td>FAIRY TIDD  </td><td>WILLETTA BOEKE  </td><td>MARGY RUCH  </td><td>COROMORO</td><td>Compensar</td><td>Antioquia</td></tr>
+<tr><td>ANNIS SCUDERI  </td><td>KARRIE CROSLEY  </td><td>CLARISSA KIM  </td><td>MELANI LIEBER  </td><td>BELLO</td><td>Compensar</td><td>Centro</td></tr>
+<tr><td>HENRY BITTLE  </td><td>LISA DRIES  </td><td>GARNET FARQUHARSON  </td><td>EMERALD LASORSA  </td><td>CABRERA</td><td>Compensar</td><td>Occidente</td></tr>
+<tr><td>CORDELL BARGE  </td><td>LILLIANA ASCENCIO  </td><td>MIKE CHIEN  </td><td>ELENE CAUL  </td><td>CARACOLÍ</td><td>Otros</td><td>Costa</td></tr>
+<tr><td>WENDELL COCKETT  </td><td>KELLY WOODELL  </td><td>LIEN GOBLE  </td><td>PATTI EDGIN  </td><td>CHINCHINÁ</td><td>Otros</td><td>Santanderes</td></tr>
+<tr><td>ORALEE VOTAW  </td><td>DANNETTE SCULL  </td><td>MARJORY HARLEY  </td><td>KATY ANDREOTTI  </td><td>OBANDO</td><td>Otros</td><td>Antioquia</td></tr>
+<tr><td>EMIL BALLEW  </td><td>JULES ARROWOOD  </td><td>KYOKO GOEHRING  </td><td>AZUCENA SALZANO  </td><td>RÁQUIRA</td><td>Otros</td><td>Centro</td></tr>
+<tr><td>JOHN MALLEY  </td><td>HERBERT YARNELL  </td><td>THEDA DEEL  </td><td>FLORA LUCAS  </td><td>GRAMALOTE</td><td>Otros</td><td>Occidente</td></tr>
+<tr><td>GREGORIO SAVORY  </td><td>DAVIDA GOLDEN  </td><td>VIRGILIO VAZQUES  </td><td>LATICIA QUIGG  </td><td>TARSO</td><td>Nueva EPS</td><td>Costa</td></tr>
+<tr><td>EMILEE ROST  </td><td>FABIOLA LINDEMAN  </td><td>GIOVANNA BARRINGER  </td><td>STEPHENIE OGREN  </td><td>PUERTO CAICEDO</td><td>Nueva EPS</td><td>Santanderes</td></tr>
+<tr><td>RONNA FENNELLY  </td><td>NICKOLAS FENTRESS  </td><td>FRANKIE NORMAN  </td><td>MAHALIA CARVAJAL  </td><td>QUÍPAMA</td><td>Nueva EPS</td><td>Antioquia</td></tr>
+<tr><td>GENEVIE ECKLEY  </td><td>AUDRIA MEISEL  </td><td>MONSERRATE SIDWELL  </td><td>LORRETTA UNG  </td><td>TÁMESIS</td><td>Nueva EPS</td><td>Centro</td></tr>
+<tr><td>LAKESHIA KNOX  </td><td>STAN WEIDENBACH  </td><td>CHARISSE LIPPOLD  </td><td>CRISTAL PONTIFF  </td><td>PALERMO</td><td>Nueva EPS</td><td>Occidente</td></tr>
+<tr><td>JEANNIE RALLS  </td><td>OFELIA CISTRUNK  </td><td>VIOLETA KINLEY  </td><td>DOLLY MALEY  </td><td>LÓPEZ DE MICAY</td><td>Cafesalud</td><td>Costa</td></tr>
+<tr><td>PABLO MATTA  </td><td>EHTEL LEMONS  </td><td>CESAR BARSH  </td><td>MORGAN REGNIER  </td><td>TRINIDAD</td><td>Cafesalud</td><td>Santanderes</td></tr>
+<tr><td>MELLISSA COFFIN  </td><td>TIFFINY TURBERVILLE  </td><td>LUCIO ANTOS  </td><td>HERMELINDA HAKIM  </td><td>SABANA DE TORRES</td><td>Cafesalud</td><td>Antioquia</td></tr>
+<tr><td>PAMILA MORT  </td><td>BRITTNI RICHINS  </td><td>FAIRY MCNITT  </td><td>LOREE TIMKO  </td><td>FRONTINO</td><td>Cafesalud</td><td>Centro</td></tr>
+<tr><td>MANUAL PRESLAR  </td><td>YOLANDE WYDRA  </td><td>DELAINE MARKLEY  </td><td>NEWTON GUMMER  </td><td>FUNDACIÓN</td><td>Cafesalud</td><td>Occidente</td></tr>
+<tr><td>WEI WALFORD  </td><td>VANNESA STELLING  </td><td>SHANELLE HOGE  </td><td>SHERIE HANGER  </td><td>TESALIA</td><td>Coomeva</td><td>Costa</td></tr>
+<tr><td>ETHA MCGRAW  </td><td>MARYLEE WHITBECK  </td><td>SHALONDA FULLWOOD  </td><td>LAYLA DEEDS  </td><td>SAN PEDRO DE CARTAGO</td><td>Coomeva</td><td>Santanderes</td></tr>
+<tr><td>DRUCILLA RYBAK  </td><td>HEIDI MCKAIN  </td><td>JADE STEHLE  </td><td>NEVILLE MIGA  </td><td>FILANDIA</td><td>Coomeva</td><td>Antioquia</td></tr>
+<tr><td>SUNSHINE KENNELLY  </td><td>DONOVAN OH  </td><td>CELINE EMOND  </td><td>LI BUFFUM  </td><td>COROZAL</td><td>Coomeva</td><td>Centro</td></tr>
+<tr><td>TONEY SHERROW  </td><td>ELNORA STUCKEY  </td><td>SOPHIA FRICKE  </td><td>REDA LIESER  </td><td>ÍQUIRA</td><td>Coomeva</td><td>Occidente</td></tr>
+<tr><td>MAPLE NOLL  </td><td>LASHANDRA WOODBRIDGE  </td><td>FAITH NORD  </td><td>ALI DOBYNS  </td><td>ACHÍ</td><td>Salud Total</td><td>Costa</td></tr>
+<tr><td>MISTIE MUTO  </td><td>ELA DIAL  </td><td>EUFEMIA SWINGLE  </td><td>ANGELIC GARLICK  </td><td>LA PEDRERA</td><td>Salud Total</td><td>Santanderes</td></tr>
+<tr><td>DELORAS FUSELIER  </td><td>SARAN HARSHBERGER  </td><td>LASHAWNA MCCULLAH  </td><td>RUTHIE BRADHAM  </td><td>SAMANÁ</td><td>Salud Total</td><td>Antioquia</td></tr>
+<tr><td>BEULA PRINTUP  </td><td>CELESTINA HIVELY  </td><td>MAGNOLIA SANTANGELO  </td><td>TOMEKA PRIES  </td><td>TAMINANGO</td><td>Salud Total</td><td>Centro</td></tr>
+<tr><td>CONCEPTION MARCEAU  </td><td>CHARITA ALFARO  </td><td>LETHA ABEYTA  </td><td>MELVINA HUCKABEE  </td><td>ATRATO</td><td>Salud Total</td><td>Occidente</td></tr>
+<tr><td>KATRINA CZECH  </td><td>CARA RITZ  </td><td>TRINH GOFORTH  </td><td>NYLA CLEMMER  </td><td>AGRADO</td><td>Compensar</td><td>Costa</td></tr>
+<tr><td>DEMETRA ELKINS  </td><td>JOSEFA NYMAN  </td><td>LATASHIA SCHOEN  </td><td>ARMIDA MANRY  </td><td>FUNZA</td><td>Compensar</td><td>Santanderes</td></tr>
+<tr><td>BOBBI BUMPUS  </td><td>HANG SELLMAN  </td><td>NEVA BIRDEN  </td><td>JORDON LENIHAN  </td><td>TIMANÁ</td><td>Compensar</td><td>Antioquia</td></tr>
+<tr><td>CHRISTY RIGNEY  </td><td>EVELYNN ORICK  </td><td>COLENE CONRAD  </td><td>KILEY GILROY  </td><td>ANAPOIMA</td><td>Compensar</td><td>Centro</td></tr>
+<tr><td>LARRAINE CHILDERS  </td><td>DANNIE LICHT  </td><td>ANTHONY ESSEX  </td><td>MIKKI ABBOT  </td><td>GUAPOTÁ</td><td>Compensar</td><td>Occidente</td></tr>
+<tr><td>DARELL KMETZ  </td><td>CHERYLL MANZO  </td><td>SHEMEKA DESTEFANO  </td><td>ROBENA BRIMER  </td><td>TÓPAGA</td><td>Otros</td><td>Costa</td></tr>
+<tr><td>TENNILLE GORTON  </td><td>TOMEKA LESESNE  </td><td>SOCORRO WEILAND  </td><td>LILLIAM SCOTTO  </td><td>SANTA ANA</td><td>Otros</td><td>Santanderes</td></tr>
+<tr><td>GERI CAMP  </td><td>LEROY CLUFF  </td><td>ROSELIA PETERMANN  </td><td>LYNDSEY JULIANO  </td><td>SAN MARTÍN DE LOBA</td><td>Otros</td><td>Antioquia</td></tr>
+<tr><td>MYRTIS BENNY  </td><td>GARY RODMAN  </td><td>MYONG HODGINS  </td><td>CASSIDY JEFFERSON  </td><td>CORRALES</td><td>Otros</td><td>Centro</td></tr>
+<tr><td>AN MELOY  </td><td>GRISELDA MCGINTY  </td><td>TREY OCANA  </td><td>BERRY CORNS  </td><td>CHITARAQUE</td><td>Otros</td><td>Occidente</td></tr>
+              </tbody>
+              </table>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 2.3.2
+      </div>
+      <strong>Copyright &copy; 2017 Biaxus
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 2.1.4 -->
+<script src="/theme/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="/theme/bootstrap/js/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="/theme/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="/theme/plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="/theme/dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="/theme/dist/js/demo.js"></script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+
+<script src="/theme/dist/js/eps-detail.js"></script>
+
+<script src="https://cdn.datatables.net/v/bs/dt-1.10.13/datatables.min.js"></script>
+
+</body>
+</html>
