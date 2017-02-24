@@ -14,12 +14,9 @@ var chart = Highcharts.chart('container', {
         pie: {
             cursor: 'pointer',
             dataLabels: {
-                enabled: true,
-                format: '<b>{point.name}</b>: {point.percentage} %',
-                style: {
-                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                }
-            }
+                enabled: false
+            },
+            showInLegend: true
         }
     },
     credits: {
@@ -49,13 +46,16 @@ var chart = Highcharts.chart('container', {
         }],
         events:{
             click: function (e){
-                console.log(e);
-                if(e.point.name === "Nueva EPS") {
-                    $("#container-1").show();
-                    chartDetail.reflow();
-                    $("#container").hide();
-                    $("#goBackContainer").show();
-                }
+                window.nuevaEpsClicks = window.nuevaEpsClicks?window.nuevaEpsClicks+1:1; 
+                setTimeout(function(){
+                    if(e.point.name === "Nueva EPS" && window.nuevaEpsClicks>1) {
+                        $("#container-1").show();
+                        chartDetail.reflow();
+                        $("#container").hide();
+                        $("#goBackContainer").show();
+                    }
+                    window.nuevaEpsClicks = 0;
+                },300);
             }
         }
     }]
@@ -77,12 +77,9 @@ var chartDetail = Highcharts.chart('container-1', {
         pie: {
             cursor: 'pointer',
             dataLabels: {
-                enabled: true,
-                format: '<b>{point.name}</b>: {point.percentage} %',
-                style: {
-                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
-                }
-            }
+                enabled: false
+            },
+            showInLegend: true
         }
     },
     credits: {
@@ -109,10 +106,14 @@ var chartDetail = Highcharts.chart('container-1', {
         }],
         events:{
             click: function (e){
-                console.log(e);
-                if(e.point.name === "Costa") {
-                    window.location.href='/eps-detail.html';
-                }
+                window.costaClicks = window.costaClicks?window.costaClicks+1:1; 
+                setTimeout(function(){
+                    if(e.point.name === "Costa" && window.costaClicks>1) {
+                        window.location.href='/eps-detail.html';
+                    }
+                    window.nuevaEpsClicks = 0;
+                },300);
+                
             }
         }
     }]
