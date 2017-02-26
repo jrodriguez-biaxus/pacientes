@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Pacientes proyectados vs efectivos | Pacientes</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.5 -->
+  <link rel="stylesheet" href="/theme/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="/theme/dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="/theme/dist/css/skins/_all-skins.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+<body class="hold-transition skin-blue layout-top-nav">
+<div class="wrapper">
+
+  <header class="main-header">
+    <nav class="navbar navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" style="display:none;" class="navbar-brand"><b>Pacientes</b></a>
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+            <i class="fa fa-bars"></i>
+          </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Pacientes proyectados vs efectivos</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="/alertas.html">Alertas</a></li>
+            </ul>
+            <ul class="nav navbar-nav">
+                <li><a href="/eps.html">Pacientes por EPS</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="#" data-toggle="modal" data-target="#birthday">
+                <i class="fa fa fa-birthday-cake"></i>
+                <span class="label label-success">4</span>
+              </a>
+            </li>
+            <!-- User Account Menu -->
+            <li class="dropdown user user-menu">
+              <!-- Menu Toggle Button -->
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <!-- The user image in the navbar-->
+                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                <span class="hidden-xs">Jesus Ríos</span>
+              </a>
+              <ul class="dropdown-menu">
+                <!-- The user image in the menu -->
+                <li class="user-header" style="height: initial;">
+                  <img src="/theme/dist/img/user2-160x160.jpg" style="display: none;" class="img-circle" alt="User Image">
+
+                  <p>
+                    Jesus Ríos
+                    <small>Gerente</small>
+                  </p>
+                </li>
+                <!-- Menu Body -->
+                <li class="user-body">
+                  <div class="row">
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Followers</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Sales</a>
+                    </div>
+                    <div class="col-xs-4 text-center">
+                      <a href="#">Friends</a>
+                    </div>
+                  </div>
+                  <!-- /.row -->
+                </li>
+                <!-- Menu Footer-->
+                <li class="user-footer">
+                  <div class="pull-left">
+                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                  </div>
+                  <div class="pull-right">
+                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                  </div>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- /.navbar-custom-menu -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </header>
+  <!-- Full Width Column -->
+  <div class="content-wrapper">
+    <div class="container">
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+        <span style="float: right">
+          <a class="btn btn-xs btn-primary" href="/pacientes.html">Volver</a>
+        </span>
+        <h1>
+          Pacientes proyectados vs efectivos 
+        </h1>
+      </section>
+
+      <!-- Main content -->
+      <section class="content">
+        <div class="box box-default">
+          <div class="box-body no-padding">
+            <div class="table-responsive">
+            <table class="table table-condensed table-striped">
+              <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre del paciente</th>
+                        <th>Nombre médico</th>
+                        <th>Especialidad</th>
+                        <th>EPS</th>
+                        <th>Ciudad</th>
+                    </tr>
+              </thead>
+                <tbody>
+<tr><td>1</td><td>CARLOS GRANADOS PEREZ</td><td>OLGA LUCIA SARMIENTO CACERES</td><td>CARDIOLOGO</td><td>COMPENSAR</td><td>BOGOTA</td></tr>
+<tr><td>2</td><td>CARLOS GRANADOS PEREZ</td><td>CHARBEL  ESCOBAR LORA</td><td>CARDIOLOGO</td><td>COMPENSAR</td><td>BOGOTA</td></tr>
+<tr><td>3</td><td>CARLOS GRANADOS PEREZ</td><td>DIEGO LUIS MENDEZ GUTIERREZ</td><td>CARDIOLOGO</td><td>NUEVA EPS</td><td>BOGOTA</td></tr>
+<tr><td>4</td><td>CARLOS GRANADOS PEREZ</td><td>MARCELA  MORA CANAL</td><td>CARDIOLOGO</td><td>NUEVA EPS</td><td>BOGOTA</td></tr>
+<tr><td>5</td><td>CARLOS GRANADOS PEREZ</td><td>GISELA ANDREA ESCOBAR LORA</td><td>CARDIOLOGO</td><td>CAFESALUD</td><td>BOGOTA</td></tr>
+<tr><td>6</td><td>CARLOS GRANADOS PEREZ</td><td>LUZ STELLA RETAVISCA GONZALEZ</td><td>CARDIOLOGO</td><td>CAFESALUD</td><td>BOGOTA</td></tr>
+<tr><td>7</td><td>CARLOS GRANADOS PEREZ</td><td>RICARDO  BEJARANO SAENZ</td><td>CARDIOLOGO</td><td>COOMEVA</td><td>BOGOTA</td></tr>
+<tr><td>8</td><td>CARLOS GRANADOS PEREZ</td><td>JUAN CARLOS COSTO GARCIA</td><td>CARDIOLOGO</td><td>NUEVA EPS</td><td>BOGOTA</td></tr>
+<tr><td>9</td><td>CARLOS GRANADOS PEREZ</td><td>LUISA  ROLON CADENA</td><td>CARDIOLOGO</td><td>COMPENSAR</td><td>BOGOTA</td></tr>
+<tr><td>10</td><td>CARLOS GRANADOS PEREZ</td><td>CLAUDIA MARCELA COSTO GARCIA</td><td>CARDIOLOGO</td><td>COMPENSAR</td><td>BOGOTA</td></tr>
+<tr><td>11</td><td>CARLOS GRANADOS PEREZ</td><td>YENY  BOHORQUEZ PEÑA</td><td>CARDIOLOGO</td><td>SANITAS</td><td>BOGOTA</td></tr>
+<tr><td>12</td><td>CARLOS GRANADOS PEREZ</td><td>ENRIQUE  CUBIDES RUEDA</td><td>CARDIOLOGO</td><td>COMPENSAR</td><td>BOGOTA</td></tr>
+<tr><td>13</td><td>WILSON GERARDO ALARCON MORA</td><td>MARTHA LUCIA ROJAS ROJAS </td><td>NEUMOLOGO</td><td>NUEVA EPS</td><td>BOGOTA</td></tr>
+<tr><td>14</td><td>WILSON GERARDO ALARCON MORA</td><td>CLEITON JAVIER CABRALES CASTRO</td><td>NEUMOLOGO</td><td>NUEVA EPS</td><td>BOGOTA</td></tr>
+<tr><td>15</td><td>WILSON GERARDO ALARCON MORA</td><td>JAIME  BOHORQUEZ CRUZ</td><td>NEUMOLOGO</td><td>NUEVA EPS</td><td>BOGOTA</td></tr>
+<tr><td>16</td><td>WILSON GERARDO ALARCON MORA</td><td>MARTHA LUCIA RODRIGUEZ CORTES </td><td>NEUMOLOGO</td><td>NUEVA EPS</td><td>BOGOTA</td></tr>
+<tr><td>17</td><td>WILSON GERARDO ALARCON MORA</td><td>ERIKA  GOMEZ URIBE</td><td>NEUMOLOGO</td><td>CAPITAL SALUD</td><td>BOGOTA</td></tr>
+<tr><td>18</td><td>WILSON GERARDO ALARCON MORA</td><td>MARISOL  ACOSTA ROA</td><td>NEUMOLOGO</td><td>SANITAS</td><td>BOGOTA</td></tr>
+<tr><td>19</td><td>WILSON GERARDO ALARCON MORA</td><td>VIVIANA  AUSIQUE MUÑOZ</td><td>NEUMOLOGO</td><td>CAPITAL SALUD</td><td>BOGOTA</td></tr>
+<tr><td>20</td><td>WILSON GERARDO ALARCON MORA</td><td>MONICA  AUSIQUE MUÑOZ</td><td>NEUMOLOGO</td><td>SANITAS</td><td>BOGOTA</td></tr>
+<tr><td>21</td><td>WILSON GERARDO ALARCON MORA</td><td>VIVIANA  CASTANEDA ORTIZ</td><td>NEUMOLOGO</td><td>CRUZ BLANCA</td><td>BOGOTA</td></tr>
+<tr><td>22</td><td>WILSON GERARDO ALARCON MORA</td><td>MARCELA  VANEGAS ARGUELLA</td><td>NEUMOLOGO</td><td>CAFESALUD</td><td>BOGOTA</td></tr>
+<tr><td>23</td><td>WILSON GERARDO ALARCON MORA</td><td>JAKELINE  MONROY GARIBELLO</td><td>NEUMOLOGO</td><td>CAFESALUD</td><td>BOGOTA</td></tr>
+<tr><td>24</td><td>WILSON GERARDO ALARCON MORA</td><td>YASMIN  FRANCO CARDENAS</td><td>NEUMOLOGO</td><td>CAFESALUD</td><td>BOGOTA</td></tr>
+<tr><td>25</td><td>WILSON GERARDO ALARCON MORA</td><td>LILI  POVEDA GUEVARA</td><td>NEUMOLOGO</td><td>COMPENSAR</td><td>BOGOTA</td></tr>
+<tr><td>26</td><td>MONICA JULIETA RAMIREZ</td><td>RICARDO  MOYA JIMENEZ</td><td>NEUMOLOGO</td><td>COOMEVA</td><td>MEDELLIN</td></tr>
+<tr><td>27</td><td>MONICA JULIETA RAMIREZ</td><td>ADRIANA  GIRALTA.</td><td>NEUMOLOGO</td><td>COOMEVA</td><td>MEDELLIN</td></tr>
+<tr><td>28</td><td>MONICA JULIETA RAMIREZ</td><td>JAIRO ALBERTO NEIRA BAQUERO</td><td>NEUMOLOGO</td><td>COOMEVA</td><td>MEDELLIN</td></tr>
+<tr><td>29</td><td>MONICA JULIETA RAMIREZ</td><td>CARMEN LIGIA GONZALEZ TRIANA</td><td>NEUMOLOGO</td><td>CAFESALUD</td><td>MEDELLIN</td></tr>
+<tr><td>30</td><td>MONICA JULIETA RAMIREZ</td><td>JOSE JORGE VELASQUEZ HERNANDEZ</td><td>NEUMOLOGO</td><td>CAFESALUD</td><td>MEDELLIN</td></tr>
+<tr><td>31</td><td>MONICA JULIETA RAMIREZ</td><td>JOSE JORGE CORRADINE ARRAZOLA </td><td>NEUMOLOGO</td><td>SALUD VIDA</td><td>MEDELLIN</td></tr>
+<tr><td>32</td><td>MONICA JULIETA RAMIREZ</td><td>MARIA CONSTANZA VARGAS YATE</td><td>NEUMOLOGO</td><td>SAVIA SALUD</td><td>MEDELLIN</td></tr>
+<tr><td>33</td><td>MONICA JULIETA RAMIREZ</td><td>ROSA EUGENIA DIAZ FLOREZ</td><td>NEUMOLOGO</td><td>SALUD VIDA</td><td>MEDELLIN</td></tr>
+<tr><td>34</td><td>MONICA JULIETA RAMIREZ</td><td>RAUL ERNESTO ALVARADO BESTENE</td><td>NEUMOLOGO</td><td>SAVIA SALUD</td><td>MEDELLIN</td></tr>
+<tr><td>35</td><td>MONICA JULIETA RAMIREZ</td><td>ALEXANDER NICOLAS ALVARADO BESTENE </td><td>NEUMOLOGO</td><td>NUEVA EPS</td><td>MEDELLIN</td></tr>
+<tr><td>36</td><td>IVAN JARRO SUAREZ</td><td>JANNETH ALVAREZ CASADIEGO</td><td>CARDIOLOGO</td><td>COOMEVA</td><td>CALI</td></tr>
+<tr><td>37</td><td>IVAN JARRO SUAREZ</td><td>NOHORA ARLENE ALZATE SOTO</td><td>CARDIOLOGO</td><td>COOMEVA</td><td>CALI</td></tr>
+<tr><td>38</td><td>IVAN JARRO SUAREZ</td><td>JOSE RICARDO ANDRADE RAMIREZ</td><td>CARDIOLOGO</td><td>COOMEVA</td><td>CALI</td></tr>
+<tr><td>39</td><td>IVAN JARRO SUAREZ</td><td>JAIME ANDRADE SIERRA</td><td>CARDIOLOGO</td><td>COOMEVA</td><td>CALI</td></tr>
+<tr><td>40</td><td>IVAN JARRO SUAREZ</td><td>LILA MARGARITA ANZOLA GIL</td><td>CARDIOLOGO</td><td>CAFESALUD</td><td>CALI</td></tr>
+<tr><td>41</td><td>IVAN JARRO SUAREZ</td><td>SURRELLA  ARANGO LOPEZ</td><td>CARDIOLOGO</td><td>CAFESALUD</td><td>CALI</td></tr>
+<tr><td>42</td><td>IVAN JARRO SUAREZ</td><td>JAIME  ARIAS BORDA</td><td>CARDIOLOGO</td><td>CAFESALUD</td><td>CALI</td></tr>
+<tr><td>43</td><td>IVAN JARRO SUAREZ</td><td>RICARDO ARIAS RESTREPO</td><td>CARDIOLOGO</td><td>CAFESALUD</td><td>CALI</td></tr>
+<tr><td>44</td><td>ADRIANA RICAUTE LOPEZ</td><td>MARIA ALEJANDRA ARRIETA NIÑO</td><td>CARDIOLOGO</td><td>CAFESALUD</td><td>BARRANQUILLA</td></tr>
+<tr><td>45</td><td>ADRIANA RICAUTE LOPEZ</td><td>DIEGO FERNANADO AUSIQUE MUÑOZ</td><td>CARDIOLOGO</td><td>CAFESALUD</td><td>BARRANQUILLA</td></tr>
+<tr><td>46</td><td>ADRIANA RICAUTE LOPEZ</td><td>JOHN RICARDO AVENDAÑO ARMTICA</td><td>CARDIOLOGO</td><td>CAFESALUD</td><td>BARRANQUILLA</td></tr>
+<tr><td>47</td><td>ADRIANA RICAUTE LOPEZ</td><td>JAVIER RODRIGO BAENE FEREZ</td><td>CARDIOLOGO</td><td>CAFESALUD</td><td>BARRANQUILLA</td></tr>
+<tr><td>48</td><td>ADRIANA RICAUTE LOPEZ</td><td>JOSE LUIS BARRAGAN FRANCO</td><td>CARDIOLOGO</td><td>CAFESALUD</td><td>BARRANQUILLA</td></tr>
+<tr><td>49</td><td>ADRIANA RICAUTE LOPEZ</td><td>ANGELA MARIA BARRERA JIMENEZ</td><td>CARDIOLOGO</td><td>NUEVA EPS</td><td>BARRANQUILLA</td></tr>
+<tr><td>50</td><td>ADRIANA RICAUTE LOPEZ</td><td>ANA MERCEDES BELALCAZAR REY</td><td>CARDIOLOGO</td><td>NUEVA EPS</td><td>BARRANQUILLA</td></tr>
+<tr><td>51</td><td>ADRIANA RICAUTE LOPEZ</td><td>GUILLERMO BONILLA RAMIREZ</td><td>CARDIOLOGO</td><td>NUEVA EPS</td><td>BARRANQUILLA</td></tr>
+<tr><td>52</td><td>NORMA LILIANA MORALES</td><td>ARNOLD ALEJANDRO BUENO AGUIRRE</td><td>NEUMOLOGO</td><td>SALUD VIDA</td><td>MEDELLIN</td></tr>
+<tr><td>53</td><td>NORMA LILIANA MORALES</td><td>JOSE JORGE BUENO ALBA</td><td>NEUMOLOGO</td><td>SURA</td><td>MEDELLIN</td></tr>
+<tr><td>54</td><td>NORMA LILIANA MORALES</td><td>JAIME ALBERTO BUENO ALBA</td><td>NEUMOLOGO</td><td>NUEVA EPS</td><td>MEDELLIN</td></tr>
+<tr><td>55</td><td>NORMA LILIANA MORALES</td><td>IVAN  CALIXTO BALLESTEROS</td><td>NEUMOLOGO</td><td>NUEVA EPS</td><td>MEDELLIN</td></tr>
+<tr><td>56</td><td>NORMA LILIANA MORALES</td><td>GERMAN CAMACHO CARVAJAL</td><td>NEUMOLOGO</td><td>NUEVA EPS</td><td>MEDELLIN</td></tr>
+<tr><td>57</td><td>NORMA LILIANA MORALES</td><td>JULIO ROBERTO CAMACHO RODRIGUEZ</td><td>NEUMOLOGO</td><td>NUEVA EPS</td><td>MEDELLIN</td></tr>
+<tr><td>58</td><td>NORMA LILIANA MORALES</td><td>LILIANA  CAMACHO RODRIGUEZ</td><td>NEUMOLOGO</td><td>NUEVA EPS</td><td>MEDELLIN</td></tr>
+<tr><td>59</td><td>SANDRA PIEDAD RODRIGUEZ</td><td>ANA MARIBEL CARTAGENA PERDOMO</td><td>CARDIOLOGO</td><td>SALUD TOTAL</td><td>BUCARAMANGA</td></tr>
+<tr><td>60</td><td>SANDRA PIEDAD RODRIGUEZ</td><td>CARLOS MAURICIO CARVAJAL MEJIA</td><td>CARDIOLOGO</td><td>SALUD TOTAL</td><td>BUCARAMANGA</td></tr>
+<tr><td>61</td><td>SANDRA PIEDAD RODRIGUEZ</td><td>JAIME CASTANEDA ORTIZ</td><td>CARDIOLOGO</td><td>SALUD TOTAL</td><td>BUCARAMANGA</td></tr>
+<tr><td>62</td><td>SANDRA PIEDAD RODRIGUEZ</td><td>JAIME CASTAÑO CARCAMO</td><td>CARDIOLOGO</td><td>NUEVA EPS</td><td>BUCARAMANGA</td></tr>
+<tr><td>63</td><td>SANDRA PIEDAD RODRIGUEZ</td><td>LUIS FERNANDO CASTILLO PABON</td><td>CARDIOLOGO</td><td>NUEVA EPS</td><td>BUCARAMANGA</td></tr>
+<tr><td>64</td><td>SANDRA PIEDAD RODRIGUEZ</td><td>LUIS JAIME CASTILLO VILLALOBOS</td><td>CARDIOLOGO</td><td>NUEVA EPS</td><td>BUCARAMANGA</td></tr>
+<tr><td>65</td><td>HENRY ALONSO GONZALEZ</td><td>MARIO WILLIAM CASTRO FORERO</td><td>NEUMOLOGO</td><td>SURA</td><td>MEDELLIN</td></tr>
+<tr><td>66</td><td>HENRY ALONSO GONZALEZ</td><td>MARIO WILLIAM CASTRO ZARATE</td><td>NEUMOLOGO</td><td>SALUD TOTAL</td><td>MEDELLIN</td></tr>
+<tr><td>67</td><td>HENRY ALONSO GONZALEZ</td><td>ALVARO ENRIQUE CHAVES CUBILLOS</td><td>NEUMOLOGO</td><td>SURA</td><td>MEDELLIN</td></tr>
+<tr><td>68</td><td>HENRY ALONSO GONZALEZ</td><td>LUIS GUILLERMO CHITIVA RINCON</td><td>NEUMOLOGO</td><td>SALUD TOTAL</td><td>MEDELLIN</td></tr>
+<tr><td>69</td><td>JORGE ELIECER GARCIA</td><td>MARIA CONSTANZA CORREA RODRIGUEZ</td><td>CARDIOLOGO</td><td>COOMEVA</td><td>CALI</td></tr>
+<tr><td>70</td><td>JORGE ELIECER GARCIA</td><td>MAURICIO  CORREDOR TORRES</td><td>CARDIOLOGO</td><td>COOMEVA</td><td>CALI</td></tr>
+<tr><td>71</td><td>JORGE ELIECER GARCIA</td><td>ELVIS  CUENCA FLOREZ</td><td>CARDIOLOGO</td><td>CAFESALUD</td><td>CALI</td></tr>
+<tr><td>72</td><td>JORGE ELIECER GARCIA</td><td>NELSON DELGADILLO ACEVEDO</td><td>CARDIOLOGO</td><td>SALUD TOTAL</td><td>CALI</td></tr>
+<tr><td>73</td><td>JORGE ELIECER GARCIA</td><td>DANIEL DELGADO LOPEZ</td><td>CARDIOLOGO</td><td>SALUD TOTAL</td><td>CALI</td></tr>
+<tr><td>74</td><td>HECTOR RICARDO LAVAREZ</td><td>MARIA CLAUDIA DIAZ FLOREZ</td><td>CARDIOLOGO</td><td>NUEVA EPS</td><td>CUCUTA</td></tr>
+<tr><td>75</td><td>HECTOR RICARDO LAVAREZ</td><td>ELBERTO DIAZ MEDINA</td><td>CARDIOLOGO</td><td>NUEVA EPS</td><td>CUCUTA</td></tr>
+<tr><td>76</td><td>HECTOR RICARDO LAVAREZ</td><td>CLAUDIA MAGALY ENCIZO FORERO</td><td>CARDIOLOGO</td><td>NUEVA EPS</td><td>CUCUTA</td></tr>
+<tr><td>77</td><td>HECTOR RICARDO LAVAREZ</td><td>JAIME  FAJARDO DE JAIMES</td><td>CARDIOLOGO</td><td>SALUD TOTAL</td><td>CUCUTA</td></tr>
+<tr><td>78</td><td>HECTOR RICARDO LAVAREZ</td><td>JORGE ISAAC FAJARDO PARRA</td><td>CARDIOLOGO</td><td>NUEVA EPS</td><td>CUCUTA</td></tr>
+<tr><td>79</td><td>HECTOR RICARDO LAVAREZ</td><td>FRANCISCO ARTURO FAJARDO RODRIGUEZ</td><td>CARDIOLOGO</td><td>NUEVA EPS</td><td>CUCUTA</td></tr>
+<tr><td>80</td><td>HECTOR RICARDO LAVAREZ</td><td>JAVIER FANDIÑO BENAVIDES</td><td>CARDIOLOGO</td><td>SANITAS</td><td>CUCUTA</td></tr>
+                </tbody>
+              </table>
+              </div>
+          </div>
+          <!-- /.box-body -->
+        </div>
+        <!-- /.box -->
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.container -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="pull-right hidden-xs">
+        <b>Version</b> 1.0
+      </div>
+      <strong>Copyright &copy; 2017 Biaxus
+    </div>
+    <!-- /.container -->
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<div class="modal fade" id="birthday" tabindex="-1" role="dialog" aria-labelledby="birthdayLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="birthdayLabel">Cumpleaños</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-condensed table-striped table-bordered">
+          <thead>
+            <th>Fecha</th>
+            <th>Nombre del paciente</th>
+            <th>Hobbie</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="3" class="text-center"><small>No hay registros</small></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery 2.1.4 -->
+<script src="/theme/plugins/jQuery/jQuery-2.1.4.min.js"></script>
+<!-- Bootstrap 3.3.5 -->
+<script src="/theme/bootstrap/js/bootstrap.min.js"></script>
+<!-- SlimScroll -->
+<script src="/theme/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="/theme/plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="/theme/dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="/theme/dist/js/demo.js"></script>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+</body>
+</html>

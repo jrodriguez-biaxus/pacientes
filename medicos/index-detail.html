@@ -33,7 +33,7 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="#" class="navbar-brand"><b>Pacientes</b></a>
+          <a href="#" style="display:none;" class="navbar-brand"><b>Pacientes</b></a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
@@ -42,7 +42,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Reporte a médicos</a></li>
+                <li class="active"><a href="#">Reporte Pacientes</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -104,14 +104,12 @@
     <div class="container">
       <!-- Content Header (Page header) -->
       <section class="content-header">
+        <span style="float: right">
+          <a class="btn btn-xs btn-primary" href="/medicos/">Volver</a>
+        </span>
         <h1>
-          Reporte a médicos
+          Reporte Pacientes
         </h1>
-        <ol class="breadcrumb">
-          <li><a href="/"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li><a href="/medicos/">Reporte a médicos</a></li>
-          <li class="active">Detalle</li>
-        </ol>
       </section>
 
       <!-- Main content -->
@@ -121,10 +119,10 @@
             <table class="table table-condensed table-striped">
               <thead>
                     <tr>
-                        <th>Nombre del paciente</th>
-                        <th>Nombre médico</th>
+                        <th>Nombre paciente</th>
+                        <th>Dosis</th>
                         <th>EPS</th>
-                        <th>Ciudad</th>
+                        <th>Fecha de inicio tratamiento</th>
                     </tr>
               </thead>
                 <tbody>
@@ -146,7 +144,7 @@
   <footer class="main-footer">
     <div class="container">
       <div class="pull-right hidden-xs">
-        <b>Version</b> 2.3.2
+        <b>Version</b> 1.0
       </div>
       <strong>Copyright &copy; 2017 Biaxus
     </div>

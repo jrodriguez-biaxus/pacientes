@@ -10,7 +10,7 @@ Highcharts.chart('container', {
             'Pacientes sin tratamiento', 
             'Pacientes sin recoger tratamientos en OL',
             'Respuestas negativas CTC', 
-            'Pacientes Tutelas', 
+            'Pacientes en tutela', 
             'Paciente no acepta programa'],
         title: {
             text: null

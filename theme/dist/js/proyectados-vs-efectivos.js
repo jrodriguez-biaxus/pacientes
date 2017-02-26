@@ -43,7 +43,7 @@ Highcharts.chart('container', {
         events: {
             click:function(e){
                 if(e.point.category === "Mar") {
-                    window.location.href = '/index-detail.html';
+                    window.location.href = '/pacientes-detail.html';
                 }
             }
         }
@@ -54,7 +54,7 @@ Highcharts.chart('container', {
         events: {
             click:function(e){
                 if(e.point.category === "Mar") {
-                    window.location.href = '/index-detail.html';
+                    window.location.href = '/pacientes-detail.html';
                 }
             }
         }

@@ -33,7 +33,7 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="#" class="navbar-brand"><b>Pacientes</b></a>
+          <a href="#" style="display:none;" class="navbar-brand"><b>Pacientes</b></a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
@@ -42,7 +42,7 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Reporte a médicos</a></li>
+                <li class="active"><a href="#">Reporte pacientes</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -105,21 +105,14 @@
       <!-- Content Header (Page header) -->
       <section class="content-header">
         <h1>
-          Reporte a médicos
+          Reporte pacientes
         </h1>
-        <ol class="breadcrumb">
-          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li class="active">Reporte a médicos</li>
-        </ol>
       </section>
 
       <!-- Main content -->
       <section class="content">
         <div id="container" style="min-width: 310px; height: 300px; margin: 0 auto"></div>
         <div class="box box-default">
-          <!--div class="box-header with-border">
-            <h3 class="box-title">Reporte de pacientes</h3>
-          </div-->
           <div class="box-body no-padding">
             <table class="table table-condensed">
               <thead>
@@ -133,24 +126,24 @@
                       <tr>
                         <td><a href="index-detail.html" style="color: initial;">Adherencia</a></td>
                         <td>15</td>
-                        <td class="text-right"><span class="badge">65 %</span></td>
+                        <td class="text-right"><span class="badge bg-green">65 %</span></td>
                       </tr>
                     
                     <tr>
                         <td>Pendientes Respuesta CTC</td>
                         <td>3</td>
-                        <td class="text-right"><span class="badge">13 %</span></td>
+                        <td class="text-right"><span class="badge bg-yellow">13 %</span></td>
                     </tr>
                     <tr>
                         <td>Paciente no acepta programa</td>
                         <td>5</td>
-                        <td class="text-right"><span class="badge">22 %</span></td>
+                        <td class="text-right"><span class="badge bg-red">22 %</span></td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
                         <th>Total pacientes preinscritos</th>
-                        <th colspan="2" class="text-center">23</th>
+                        <th colspan="2">23</th>
                     </tr>
                 </tfoot>
               </table>
@@ -167,7 +160,7 @@
   <footer class="main-footer">
     <div class="container">
       <div class="pull-right hidden-xs">
-        <b>Version</b> 2.3.2
+        <b>Version</b> 1.0
       </div>
       <strong>Copyright &copy; 2017 Biaxus
     </div>
@@ -191,6 +184,6 @@
 
 <script src="https://code.highcharts.com/highcharts.js"></script>
 
-<script src="/theme/dist/js/medicos.js?vers=20170222"></script>
+<script src="/theme/dist/js/medicos.js?vers=20170226"></script>
 </body>
 </html>

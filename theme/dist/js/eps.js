@@ -2,6 +2,9 @@ var chart = Highcharts.chart('container', {
     chart: {
         type: 'pie'
     },
+    lang: {
+        drillUpText:'< Volver a {series.name}'
+    },
     title: {
         text: ''
     },
@@ -27,38 +30,55 @@ var chart = Highcharts.chart('container', {
         colorByPoint: true,
         data: [{
             name: 'Nueva EPS',
-            y: 30
+            y: 30,
+            drilldown: 'Nueva EPS'
         }, {
             name: 'Cafesalud',
-            y: 21
+            y: 21,
+            drilldown: null
         }, {
             name: 'Coomeva',
-            y: 12
+            y: 12,
+            drilldown: null
         }, {
             name: 'Salud Total',
-            y: 10
+            y: 10,
+            drilldown: null
         }, {
             name: 'Compensar',
-            y: 8
+            y: 8,
+            drilldown: null
         }, {
             name: 'Otros',
-            y: 19
-        }],
-        events:{
-            click: function (e){
-                window.nuevaEpsClicks = window.nuevaEpsClicks?window.nuevaEpsClicks+1:1; 
-                setTimeout(function(){
-                    if(e.point.name === "Nueva EPS" && window.nuevaEpsClicks>1) {
-                        $("#container-1").show();
-                        chartDetail.reflow();
-                        $("#container").hide();
-                        $("#goBackContainer").show();
-                    }
-                    window.nuevaEpsClicks = 0;
-                },300);
+            y: 19,
+            drilldown: null
+        }]
+    }],
+    drilldown: {
+        series: [{
+            name: 'Pacientes',
+            id: 'Nueva EPS',
+            data: [
+                ['Costa',12], 
+                ['Santanderes', 8], 
+                ['Antioquia',16], 
+                ['Centro',46], 
+                ['Occidente',18]
+            ],
+            events:{
+                click: function (e){
+                    window.costaClicks = window.costaClicks?window.costaClicks+1:1; 
+                    setTimeout(function(){
+                        if(e.point.name === "Costa" && window.costaClicks>1) {
+                            window.location.href='/eps-detail.html';
+                        }
+                        window.nuevaEpsClicks = 0;
+                    },300);
+                    
+                }
             }
-        }
-    }]
+        }]
+    }
 });
 
 var chartDetail = Highcharts.chart('container-1', {
@@ -88,22 +108,13 @@ var chartDetail = Highcharts.chart('container-1', {
     series: [{
         name: 'Pacientes',
         colorByPoint: true,
-        data: [{
-            name: 'Costa',
-            y: 12
-        }, {
-            name: 'Santanderes',
-            y: 8
-        }, {
-            name: 'Antioquia',
-            y: 16
-        }, {
-            name: 'Centro',
-            y: 46
-        }, {
-            name: 'Occidente',
-            y: 18
-        }],
+        data: [
+            {name: 'Costa', y: 12}, 
+            {name: 'Santanderes',y: 8}, 
+            {name: 'Antioquia',y: 16}, 
+            {name: 'Centro',y: 46}, 
+            {name: 'Occidente',y: 18}
+            ],
         events:{
             click: function (e){
                 window.costaClicks = window.costaClicks?window.costaClicks+1:1; 

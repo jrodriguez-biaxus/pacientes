@@ -33,7 +33,7 @@
     <nav class="navbar navbar-static-top">
       <div class="container">
         <div class="navbar-header">
-          <a href="#" class="navbar-brand"><b>Pacientes</b></a>
+          <a href="#" class="navbar-brand" style="display:none;"><b>Pacientes</b></a>
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
             <i class="fa fa-bars"></i>
           </button>
@@ -42,13 +42,13 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
             <ul class="nav navbar-nav">
-                <li><a href="/">Reporte de Proyectados vs Efectivos</a></li>
+                <li><a href="/pacientes.html">Pacientes proyectados vs efectivos</a></li>
             </ul>
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#">Alertas</a></li>
             </ul>
             <ul class="nav navbar-nav">
-                <li><a href="/eps.html">Reporte de Pacientes por EPS y Zona</a></li>
+                <li><a href="/eps.html">Pacientes por EPS</a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -120,10 +120,6 @@
         <h1>
           Alertas
         </h1>
-        <ol class="breadcrumb">
-          <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-          <li class="active">Alertas</li>
-        </ol>
       </section>
 
       <!-- Main content -->
@@ -147,33 +143,33 @@
                     <tr>
                         <td><a href="alertas-detail.html" style="color: initial;">Pacientes sin tratamiento</a></td>
                         <td>12</td>
-                        <td class="text-right"><span class="badge">30 %</span></td>
+                        <td class="text-right"><span class="badge bg-red">30 %</span></td>
                     </tr>
                     <tr>
                         <td>Pacientes sin recoger tratamientos en OL</td>
                         <td>10</td>
-                        <td class="text-right"><span class="badge">25 %</span></td>
+                        <td class="text-right"><span class="badge bg-red">25 %</span></td>
                     </tr>
                     <tr>
                         <td>Respuestas negativas CTC</td>
                         <td>5</td>
-                        <td class="text-right"><span class="badge">13 %</span></td>
+                        <td class="text-right"><span class="badge bg-red">13 %</span></td>
                     </tr>
                     <tr>
-                        <td>Pacientes Tutelas</td>
+                        <td>Pacientes en tutela</td>
                         <td>7</td>
-                        <td class="text-right"><span class="badge">18 %</span></td>
+                        <td class="text-right"><span class="badge bg-red">18 %</span></td>
                     </tr>
                     <tr>
                         <td>Paciente no acepta programa</td>
                         <td>6</td>
-                        <td class="text-right"><span class="badge">15 %</span></td>
+                        <td class="text-right"><span class="badge bg-red">15 %</span></td>
                     </tr>
                 </tbody>
                 <tfoot>
                     <tr>
                         <th>Total pacientes</th>
-                        <th colspan="2" class="text-center">40</th>
+                        <th colspan="2">40</th>
                     </tr>
                 </tfoot>
               </table>
@@ -190,7 +186,7 @@
   <footer class="main-footer">
     <div class="container">
       <div class="pull-right hidden-xs">
-        <b>Version</b> 2.3.2
+        <b>Version</b> 1.0
       </div>
       <strong>Copyright &copy; 2017 Biaxus
     </div>
@@ -240,6 +236,6 @@
 
 <script src="https://code.highcharts.com/highcharts.js"></script>
 
-<script src="/theme/dist/js/alertas.js?vers=20170222"></script>
+<script src="/theme/dist/js/alertas.js?vers=20170226"></script>
 </body>
 </html>
