@@ -39,7 +39,7 @@ Highcharts.chart('container', {
     },
     series: [{
         name: 'Pacientes',
-        data: [15, 3, 5],
+        data: [{y: 13, color: '#00a65a'}, {y: 3, color: '#f39c12'}, {y: 5, color: '#dd4b39'}],
         events: {
             click:function(e){
                 if(e.point.category === "Adherencia") {
